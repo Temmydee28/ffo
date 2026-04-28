@@ -90,7 +90,7 @@ export default function FFOStudentPage() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Side: Content */}
           <div className="text-center md:text-left">
-            <h1 className="text-6xl md:text-8xl font-bold mb-8 leading-tight tracking-tight">
+            <h1 className="text-4xl md:text-8xl font-bold mb-8 leading-tight tracking-tight">
               Stop Going Broke <br />
               <span className="text-gradient">By The 15th.</span>
             </h1>
@@ -111,10 +111,13 @@ export default function FFOStudentPage() {
             </div>
           </div>
 
-          {/* Right Side: Hero Image */}
-          <div className="relative">
-            <div className="relative w-full h-full pl-30 object-cover overflow-hidden shadow-[0_90px_20px_-52px_rgba(9,0,0,5.7)]">
-              <img className='w-[85%] h-[85%] object-cover ' src="hero5.png" alt="FFO Hero" />
+          {/* Right Side: Hero Image - Hidden on mobile */}
+          <div className="relative hidden md:flex justify-center items-center">
+            {/* Detached 3D Shadow / Glow */}
+            <div className="absolute bottom-[-20px] w-[60%] h-[40px] bg-emerald-500/20 blur-[50px] rounded-[100%] animate-pulse" />
+            
+            <div className="relative z-10 w-full max-w-lg transform hover:-translate-y-4 transition-transform duration-700 ease-in-out">
+              <img className='w-full h-auto object-contain drop-shadow-[0_35px_35px_rgba(0,0,0,0.6)]' src="hero5.png" alt="FFO Hero" />
             </div>
           </div>
         </div>
