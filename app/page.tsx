@@ -31,7 +31,7 @@ export default function FFOStudentPage() {
     setError('');
     
     try {
-      const response = await fetch('https://korensi-nest-backend.onrender.c/waitlist/join', {
+      const response = await fetch('https://korensi-nest-backend.onrender.com/waitlist/join', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
