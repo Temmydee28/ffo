@@ -70,10 +70,10 @@ export default function FFOStudentPage() {
       </div> */}
 
       {/* Navigation */}
-      <nav className="w-full py-6 px-6 md:px-12 flex justify-between items-center glass-card sticky top-0 z-50">
+      <nav className="w-full py-5 px-5 md:px-10 flex justify-between items-center glass-card sticky top-0 z-50">
         <div className="flex items-center gap-3">
           {/* Logo Placeholder */}
-          <img className='w-15 h-15' src="/ffologo.png" alt="FFO Logo" />
+          <img className='w-10 h-10' src="/ffologo.png" alt="FFO Logo" />
           <div className="text-2xl font-bold tracking-tighter">
             <span className="text-white">FFO</span>
           </div>
@@ -104,10 +104,10 @@ export default function FFOStudentPage() {
                 Secure My Daily Payout
                 <HugeiconsIcon icon={ArrowRight01Icon} size={20} />
               </a>
-              {/* <p className="text-xs text-gray-500 flex items-center gap-2 uppercase tracking-widest">
+              <p className="text-xs text-gray-500 flex items-center gap-2 uppercase tracking-widest">
                 <HugeiconsIcon icon={Mortarboard01Icon} size={14} className="text-emerald-500" />
-                Only for the founding 100 students
-              </p> */}
+               Join the beta waitlist. Zero cost to join. Guaranteed survival.
+              </p>
             </div>
           </div>
 
@@ -187,7 +187,7 @@ export default function FFOStudentPage() {
           
           <div className="relative z-10 max-w-xl">
             <h2 className="text-4xl font-bold mb-4">Join the FFO Beta</h2>
-            <p className="text-gray-400 mb-10">We are building FFO specifically for students who are tired of the "SAPA lifestyle". We are currently in closed beta and looking for 100 students to test our fractionalization algorithm and give us feedback.</p>
+            <p className="text-gray-400 mb-10">As FFO Beta Tester you get.<br/>.Exclusive "Founding User" badge in the app. <br/>. Access To FFO Premium Features. <br/>. A direct say in how we build the future of Student Fintech</p>
 
             {/* Spots Counter */}
             {/* <div className="mb-10 p-6 bg-white/5 rounded-2xl border border-white/5 animate-pulse-custom">
