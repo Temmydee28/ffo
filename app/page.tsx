@@ -100,7 +100,7 @@ export default function FFOStudentPage() {
             </p>
 
             <div className="flex flex-col md:flex-row items-center gap-6">
-              <a href="#join" className="payout-glow text-white px-6 py-5 rounded-[30] font-bold text-lg hover:scale-105 transition-transform flex items-center gap-2">
+              <a href="#join" className="payout-glow text-white px-6 py-5 rounded-[30] font-bold text-lg hover:scale-105 transition-transform flex items-center gap-2 cursor-pointer">
                 Secure My Daily Payout
                 <HugeiconsIcon icon={ArrowRight01Icon} size={20} />
               </a>
@@ -232,7 +232,7 @@ export default function FFOStudentPage() {
               <button 
                 type="submit" 
                 disabled={isSubmitting}
-                className="w-full payout-glow text-white py-5 rounded-xl font-bold text-lg hover:scale-[1.01] active:scale-[0.99] transition-all flex items-center justify-center gap-3"
+                className="w-full payout-glow text-white py-5 rounded-xl font-bold text-lg hover:scale-[1.01] active:scale-[0.99] transition-all flex items-center justify-center gap-3 cursor-pointer"
               >
                 {isSubmitting ? (
                   <>
@@ -270,7 +270,7 @@ export default function FFOStudentPage() {
             <p className="text-gray-400 mb-8">We&apos;ve sent a survival package to your student email. Get ready to master your allowance.</p>
             <button 
               onClick={() => setShowSuccess(false)} 
-              className="text-emerald-400 font-bold underline underline-offset-8"
+              className="text-emerald-400 font-bold underline underline-offset-8 cursor-pointer"
             >
               Return Home
             </button>
