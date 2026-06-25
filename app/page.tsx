@@ -1,22 +1,5 @@
 
-
 'use client';
-
-import React, { useState } from 'react';
-import { HugeiconsIcon } from "@hugeicons/react";
-import { 
-  Mortarboard01Icon, 
-  CalculatorIcon, 
-  LockIcon, 
-  Clock01Icon, 
-  Ticket01Icon, 
-  CheckmarkCircle02Icon, 
-  Loading03Icon,
-  ArrowRight01Icon
-} from "@hugeicons/core-free-icons";
-
-'use client';
-
 import React, { useState } from 'react';
 import { HugeiconsIcon } from "@hugeicons/react";
 import { 
@@ -30,7 +13,15 @@ import {
   ArrowRight01Icon,
   HelpCircleIcon,
   CreditCardIcon,
-  SecurityIcon
+  SecurityIcon,
+   Mortarboard01Icon, 
+  CalculatorIcon, 
+  LockIcon, 
+  Clock01Icon, 
+  Ticket01Icon, 
+  CheckmarkCircle02Icon, 
+  Loading03Icon,
+  ArrowRight01Icon
 } from "@hugeicons/core-free-icons";
 
 export default function FFOStudentPage() {
