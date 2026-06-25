@@ -59,7 +59,7 @@ export default function FFOStudentPage() {
       {/* Navigation */}
       <nav className="w-full py-5 px-5 md:px-10 flex justify-between items-center glass-card sticky top-0 z-50">
         <div className="flex items-center gap-3">
-          <img className='w-10 h-10' src="/icon.png" alt="FFO Logo" />
+          <img className='w-10 h-10' src="/ffologo.png" alt="FFO Logo" />
           <div className="text-2xl font-bold tracking-tighter">
             <span className="text-white">FFO</span>
           </div>
@@ -101,9 +101,11 @@ export default function FFOStudentPage() {
           </div>
 
           <div className="relative hidden md:flex justify-center items-center">
+            {/* Detached 3D Shadow / Glow */}
             <div className="absolute bottom-[-20px] w-[60%] h-[40px] bg-emerald-500/20 blur-[50px] rounded-[100%] animate-pulse" />
+            
             <div className="relative z-10 w-full max-w-lg transform hover:-translate-y-4 transition-transform duration-700 ease-in-out">
-              <img className='w-full h-auto object-contain drop-shadow-[0_35px_35px_rgba(0,0,0,0.6)]' src="/icon.png" alt="FFO Hero" />
+              <img className='w-full h-auto object-contain drop-shadow-[0_35px_35px_rgba(0,0,0,0.6)]' src="hero5.png" alt="FFO Hero" />
             </div>
           </div>
         </div>
