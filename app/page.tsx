@@ -15,6 +15,24 @@ import {
   ArrowRight01Icon
 } from "@hugeicons/core-free-icons";
 
+'use client';
+
+import React, { useState } from 'react';
+import { HugeiconsIcon } from "@hugeicons/react";
+import { 
+  Mortarboard01Icon, 
+  CalculatorIcon, 
+  LockIcon, 
+  Clock01Icon, 
+  Ticket01Icon, 
+  CheckmarkCircle02Icon, 
+  Loading03Icon,
+  ArrowRight01Icon,
+  HelpCircleIcon,
+  CreditCardIcon,
+  SecurityIcon
+} from "@hugeicons/core-free-icons";
+
 export default function FFOStudentPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
@@ -55,40 +73,28 @@ export default function FFOStudentPage() {
 
   return (
     <main className="selection:bg-emerald-500/30">
-      {/* Top Notice */}
-      {/* <div className="w-full bg-emerald-500 text-slate-900 py-2 overflow-hidden whitespace-nowrap border-b border-emerald-400">
-        <div className="flex animate-marquee font-bold text-xs uppercase tracking-widest">
-          <span className="mx-4">Batch #001: First Semester Cohort</span>
-          <span className="mx-4">Limited to 100 Students</span>
-          <span className="mx-4">Fractionalize Your Allowance</span>
-          <span className="mx-4">No More Broke Weeks</span>
-          <span className="mx-4">Batch #001: First Semester Cohort</span>
-          <span className="mx-4">Limited to 100 Students</span>
-          <span className="mx-4">Fractionalize Your Allowance</span>
-          <span className="mx-4">No More Broke Weeks</span>
-        </div>
-      </div> */}
-
       {/* Navigation */}
       <nav className="w-full py-5 px-5 md:px-10 flex justify-between items-center glass-card sticky top-0 z-50">
         <div className="flex items-center gap-3">
-          {/* Logo Placeholder */}
-          <img className='w-10 h-10' src="/ffologo.png" alt="FFO Logo" />
+          <img className='w-10 h-10' src="/icon.png" alt="FFO Logo" />
           <div className="text-2xl font-bold tracking-tighter">
             <span className="text-white">FFO</span>
           </div>
         </div>
         <div className="hidden md:flex gap-8 text-sm font-medium text-gray-400 uppercase tracking-widest">
-          <a href="#how" className="hover:text-emerald-400 transition-colors">The System</a>
-          <a href="#join" className="hover:text-emerald-400 transition-colors">The Beta</a>
+          <a href="#home" className="hover:text-emerald-400 transition-colors">Home</a>
+          <a href="#services" className="hover:text-emerald-400 transition-colors">Services</a>
+          <a href="#about" className="hover:text-emerald-400 transition-colors">About Us</a>
+          <a href="#join" className="hover:text-emerald-400 transition-colors">Waitlist</a>
         </div>
+        <a href="#join" className="hidden md:block bg-emerald-500 hover:bg-emerald-600 text-slate-900 font-bold px-5 py-2.5 rounded-full text-xs uppercase tracking-wider transition-all">
+          Join Waitlist
+        </a>
       </nav>
 
-      {/* Hero */}
-      <section className="relative pt-12 md:pt-24 pb-20 px-3 max-w-7xl mx-auto">
-
+      {/* Home (Hero) */}
+      <section id="home" className="relative pt-12 md:pt-24 pb-20 px-4 max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Left Side: Content */}
           <div className="text-center md:text-left">
             <h1 className="text-4xl md:text-8xl font-bold mb-8 leading-tight tracking-tight">
               Stop Going Broke <br />
@@ -100,48 +106,28 @@ export default function FFOStudentPage() {
             </p>
 
             <div className="flex flex-col md:flex-row items-center gap-6">
-              <a href="#join" className="payout-glow text-white px-6 py-5 rounded-[30] font-bold text-lg hover:scale-105 transition-transform flex items-center gap-2 cursor-pointer">
+              <a href="#join" className="payout-glow text-white px-6 py-5 rounded-full font-bold text-lg hover:scale-105 transition-transform flex items-center gap-2 cursor-pointer">
                 Secure My Daily Payout
                 <HugeiconsIcon icon={ArrowRight01Icon} size={20} />
               </a>
               <p className="text-xs text-gray-500 flex items-center gap-2 uppercase tracking-widest">
                 <HugeiconsIcon icon={Mortarboard01Icon} size={14} className="text-emerald-500" />
-               Join the beta waitlist. Zero cost to join. Guaranteed survival.
+                Join the beta waitlist. Zero cost to join. Guaranteed survival.
               </p>
             </div>
           </div>
 
-          {/* Right Side: Hero Image - Hidden on mobile */}
           <div className="relative hidden md:flex justify-center items-center">
-            {/* Detached 3D Shadow / Glow */}
             <div className="absolute bottom-[-20px] w-[60%] h-[40px] bg-emerald-500/20 blur-[50px] rounded-[100%] animate-pulse" />
-            
             <div className="relative z-10 w-full max-w-lg transform hover:-translate-y-4 transition-transform duration-700 ease-in-out">
-              <img className='w-full h-auto object-contain drop-shadow-[0_35px_35px_rgba(0,0,0,0.6)]' src="hero5.png" alt="FFO Hero" />
+              <img className='w-full h-auto object-contain drop-shadow-[0_35px_35px_rgba(0,0,0,0.6)]' src="/icon.png" alt="FFO Hero" />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Problem / Agitation */}
-      <section className="py-24 px-6 border-y border-white/5 bg-white/[0.01]">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-bold mb-12 text-center">The &quot;Allowance Curse&quot; is real.</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="glass-card p-8 rounded-3xl border-l-4 border-l-red-500/50">
-              <p className="text-gray-400 leading-relaxed mb-4">You get your allowance, feel rich for a week, and then spend the rest of the month taking G4oxide.</p>
-              <span className="text-red-400 text-sm font-bold">— Week 3 Reality</span>
-            </div>
-            <div className="glass-card p-8 rounded-3xl border-l-4 border-l-emerald-500/50">
-              <p className="text-gray-400 leading-relaxed mb-4">FFO divides your allowance by the days in the month. We pay you your &quot;Survival Funds&quot; daily.</p>
-              <span className="text-emerald-400 text-sm font-bold">— The FFO Solution</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* The Needle Quote */}
-      <section className="py-32 px-6 text-center">
+      {/* Quote banner */}
+      <section className="py-24 px-6 text-center border-t border-white/5 bg-white/[0.01]">
         <div className="max-w-3xl mx-auto">
           <div className="serif italic text-4xl md:text-5xl text-gray-300 leading-relaxed mb-8">
             &quot;Everybody wants to enjoy the results of discipline... but not everyone is ready to go under <span className="text-emerald-500 underline underline-offset-8">the needle</span> of discipline.&quot;
@@ -150,56 +136,98 @@ export default function FFOStudentPage() {
         </div>
       </section>
 
-      {/* How it Works */}
-      <section id="how" className="py-24 px-6 max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold mb-16 text-center">How FFO Keeps You Fed</h2>
+      {/* Services Section */}
+      <section id="services" className="py-24 px-6 border-b border-white/5 max-w-6xl mx-auto">
+        <h2 className="text-4xl font-bold mb-4 text-center">Our Services</h2>
+        <p className="text-gray-400 text-center max-w-2xl mx-auto mb-16">
+          FFO provides a specialized micro-budgeting system tailored explicitly to help university students manage their monthly eating allowances without running dry.
+        </p>
         <div className="grid md:grid-cols-3 gap-12">
-          <div className="text-center">
-            <div className="w-20 h-20 bg-emerald-500/10 rounded-3xl flex items-center justify-center mx-auto mb-6 text-emerald-400">
-              <HugeiconsIcon icon={CalculatorIcon} size={32} />
+          <div className="text-center bg-white/[0.02] p-8 rounded-3xl border border-white/5">
+            <div className="w-16 h-16 bg-emerald-500/10 rounded-2xl flex items-center justify-center mx-auto mb-6 text-emerald-400">
+              <HugeiconsIcon icon={CalculatorIcon} size={28} />
             </div>
-            <h3 className="text-xl font-bold mb-4">Fractionalize</h3>
-            <p className="text-gray-400 text-sm">Input your allowance. FFO calculates your &quot;Daily Survival Payout&quot; automatically.</p>
+            <h3 className="text-xl font-bold mb-4">Smart Budget Fractionalization</h3>
+            <p className="text-gray-400 text-sm">
+              Input your allowance and set your monthly targets. Our algorithms calculate your daily survival payouts automatically based on your customized meals-per-day profile.
+            </p>
           </div>
-          <div className="text-center">
-            <div className="w-20 h-20 bg-emerald-500/10 rounded-3xl flex items-center justify-center mx-auto mb-6 text-emerald-400">
-              <HugeiconsIcon icon={LockIcon} size={32} />
+          <div className="text-center bg-white/[0.02] p-8 rounded-3xl border border-white/5">
+            <div className="w-16 h-16 bg-emerald-500/10 rounded-2xl flex items-center justify-center mx-auto mb-6 text-emerald-400">
+              <HugeiconsIcon icon={LockIcon} size={28} />
             </div>
-            <h3 className="text-xl font-bold mb-4">The Vault</h3>
-            <p className="text-gray-400 text-sm">Funds for the end of the month are locked. Your future self will thank you.</p>
+            <h3 className="text-xl font-bold mb-4">Locked Allowance Vaults</h3>
+            <p className="text-gray-400 text-sm">
+              Funds allocated for later in the semester are locked safely in your wallet. FFO ensures you cannot accidentally overspend today's allowances on impulse purchases.
+            </p>
           </div>
-          <div className="text-center">
-            <div className="w-20 h-20 bg-emerald-500/10 rounded-3xl flex items-center justify-center mx-auto mb-6 text-emerald-400">
-              <HugeiconsIcon icon={Clock01Icon} size={32} />
+          <div className="text-center bg-white/[0.02] p-8 rounded-3xl border border-white/5">
+            <div className="w-16 h-16 bg-emerald-500/10 rounded-2xl flex items-center justify-center mx-auto mb-6 text-emerald-400">
+              <HugeiconsIcon icon={Clock01Icon} size={28} />
             </div>
-            <h3 className="text-xl font-bold mb-4">Schedule Sync</h3>
-            <p className="text-gray-400 text-sm">Daily segment payouts for Breakfast, Lunch, and Dinner. No impulse snacking.</p>
+            <h3 className="text-xl font-bold mb-4">Automated Daily Disbursements</h3>
+            <p className="text-gray-400 text-sm">
+              Receive your allowance segments seamlessly on your dashboard every single day. Keep your spending regular, simple, and synced to your biological clock.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Paystack Business & Product Information (About) */}
+      <section id="about" className="py-24 px-6 bg-white/[0.01]">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-16">
+            <span className="text-emerald-400 text-xs font-bold uppercase tracking-widest">Product Information</span>
+            <h2 className="text-4xl font-bold mt-2">How FFO Operates</h2>
+            <p className="text-gray-400 mt-4 max-w-3xl mx-auto">
+              For Food Only (FFO) is a specialized student micro-budgeting system. We build tools that make smart budgeting visual, practical, and highly disciplined for young adults.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12 items-stretch">
+            <div className="glass-card p-8 rounded-3xl flex flex-col justify-between">
+              <div>
+                <div className="flex items-center gap-3 mb-6">
+                  <HugeiconsIcon icon={CreditCardIcon} size={24} className="text-emerald-400" />
+                  <h3 className="text-xl font-bold">Payments & Transactions</h3>
+                </div>
+                <p className="text-gray-400 text-sm leading-relaxed mb-6">
+                  We integrate standard banking channels using Paystack to let users fund their local FFO Wallet. These funds are saved securely, and daily payouts are systematically generated as allowances. Users scan and pay approved campus cafeterias/merchants through their locked daily payouts.
+                </p>
+              </div>
+              <div className="border-t border-white/5 pt-4 text-xs text-gray-500">
+                Authorized deposits and merchant settlements are processed securely via verified gateways.
+              </div>
+            </div>
+
+            <div className="glass-card p-8 rounded-3xl flex flex-col justify-between">
+              <div>
+                <div className="flex items-center gap-3 mb-6">
+                  <HugeiconsIcon icon={SecurityIcon} size={24} className="text-emerald-400" />
+                  <h3 className="text-xl font-bold">Security, Verification & KYC</h3>
+                </div>
+                <p className="text-gray-400 text-sm leading-relaxed mb-6">
+                  Before a student can unlock virtual account details or initiate payouts, they must complete a multi-stage security check. This includes personal university details verification, valid ID document validation (NIN/BVN mapping), and configuring a secure transaction PIN.
+                </p>
+              </div>
+              <div className="border-t border-white/5 pt-4 text-xs text-gray-500">
+                100% compliance with local financial regulations and student privacy laws.
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Join Waitlist */}
-      <section id="join" className="py-32 px-6">
-        <div className="max-w-4xl mx-auto glass-card rounded-[40px] p-8 md:p-16 relative overflow-hidden">
+      <section id="join" className="py-24 px-6 max-w-4xl mx-auto">
+        <div className="glass-card rounded-[40px] p-8 md:p-16 relative overflow-hidden">
           <div className="absolute top-0 right-0 p-8 text-6xl text-emerald-500/10 opacity-50">
             <HugeiconsIcon icon={Ticket01Icon} size={80} className="rotate-12" />
           </div>
           
           <div className="relative z-10 max-w-xl">
             <h2 className="text-4xl font-bold mb-4">Join the FFO Beta</h2>
-            <p className="text-gray-400 mb-10">As FFO Beta Tester you get.<br/>.Exclusive "Founding User" badge in the app. <br/>. Access To FFO Premium Features. <br/>. A direct say in how we build the future of Student Fintech</p>
-
-            {/* Spots Counter */}
-            {/* <div className="mb-10 p-6 bg-white/5 rounded-2xl border border-white/5 animate-pulse-custom">
-              <div className="flex justify-between text-xs font-bold mb-3">
-                <span className="text-gray-500">Student Beta Capacity</span>
-                <span className="text-emerald-400">89 / 100</span>
-              </div>
-              <div className="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
-                <div className="bg-emerald-500 h-full w-[89%] rounded-full shadow-[0_0_15px_rgba(16,185,129,0.5)]"></div>
-              </div>
-              <p className="text-xs text-red-400 font-bold mt-4">🚨 Only 11 spots remaining for this semester.</p>
-            </div> */}
+            <p className="text-gray-400 mb-10">As FFO Beta Tester you get:<br/>. Exclusive &quot;Founding User&quot; badge in the app. <br/>. Early Access to FFO Premium Features. <br/>. A direct say in how we build the future of Student Fintech</p>
 
             <form className="space-y-4" onSubmit={handleJoin}>
               <div className="grid md:grid-cols-2 gap-4">
@@ -207,7 +235,7 @@ export default function FFOStudentPage() {
                   type="text" 
                   placeholder="First Name" 
                   required 
-                  className="w-full bg-slate-900 border border-white/10 px-6 py-4 rounded-xl focus:border-emerald-500 outline-none transition-all"
+                  className="w-full bg-slate-900 border border-white/10 px-6 py-4 rounded-xl focus:border-emerald-500 outline-none transition-all text-white"
                   value={formData.firstName}
                   onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
                 />
@@ -215,7 +243,7 @@ export default function FFOStudentPage() {
                   type="text" 
                   placeholder="University" 
                   required 
-                  className="w-full bg-slate-900 border border-white/10 px-6 py-4 rounded-xl focus:border-emerald-500 outline-none transition-all"
+                  className="w-full bg-slate-900 border border-white/10 px-6 py-4 rounded-xl focus:border-emerald-500 outline-none transition-all text-white"
                   value={formData.university}
                   onChange={(e) => setFormData({ ...formData, university: e.target.value })}
                 />
@@ -224,7 +252,7 @@ export default function FFOStudentPage() {
                 type="email" 
                 placeholder="Student Email" 
                 required 
-                className="w-full bg-slate-900 border border-white/10 px-6 py-4 rounded-xl focus:border-emerald-500 outline-none transition-all"
+                className="w-full bg-slate-900 border border-white/10 px-6 py-4 rounded-xl focus:border-emerald-500 outline-none transition-all text-white"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
               />
@@ -252,7 +280,8 @@ export default function FFOStudentPage() {
       {/* Footer */}
       <footer className="py-12 border-t border-white/5 text-center text-gray-600 text-sm">
         <p>&copy; 2026 For Food Only (FFO). All rights reserved.</p>
-        <p className="mt-2 flex items-center justify-center gap-2">
+        <p className="text-xs text-gray-500 mt-2">For customer inquiries and payment disputes, please reach out to forfoodonly4fo@gmail.com.</p>
+        <p className="mt-4 flex items-center justify-center gap-2">
           <span className="w-1 h-1 bg-emerald-500 rounded-full"></span>
           Discipline is freedom.
           <span className="w-1 h-1 bg-emerald-500 rounded-full"></span>
